@@ -42,6 +42,7 @@ try:
     from step_7_final_score_FIXED_PATCHED import score_one_scenario_auto, pick_best_scenario
     from friendship_filters_fixed import filter_scenarios_fixed
     from statistics_generator import generate_statistics_table, export_statistics_to_excel
+    from steps_export import create_steps_excel_download_ui
 except ImportError as e:
     st.error(f"Σφάλμα εισαγωγής modules: {e}")
     st.stop()
@@ -415,7 +416,6 @@ def run_step3(step2_results):
             # Προσομοίωση Step 3 (χρήση του υπάρχοντος module)
             from step_3_helpers_FIXED import apply_step3_on_sheet
             
-from steps_export import create_steps_excel_download_ui
 
             df_step3, metrics = apply_step3_on_sheet(df, step2_col, num_classes=2)
             
