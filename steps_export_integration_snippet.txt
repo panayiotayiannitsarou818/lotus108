@@ -1,0 +1,14 @@
+
+# --- ΠΡΟΣΘΗΚΗ ΣΤΗΝ ΕΦΑΡΜΟΓΗ STREAMLIT ---
+# 1) Προσθήκη import στην κορυφή:
+# from steps_export import create_steps_excel_download_ui
+#
+# 2) Στο σημείο που εμφανίζεις τα τελικά (μετά το Βήμα 6 ή τη σύγκριση σεναρίων), βάλε:
+# if "step_results" in st.session_state:
+#     create_steps_excel_download_ui(st.session_state.step_results)
+#
+# Απαιτείται: st.session_state.step_results["final"] = {
+#    "ΣΕΝΑΡΙΟ_1": {"df": df1, "final_column": "ΒΗΜΑ6_ΤΜΗΜΑ"},
+#    "ΣΕΝΑΡΙΟ_2": {"df": df2, "final_column": "ΒΗΜΑ6_ΤΜΗΜΑ"},
+#    ...
+# }
